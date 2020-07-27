@@ -27,22 +27,27 @@
 		<div class="dropdown">
 			<button class="dropbtn">Dropdown</button>
 			<div class="dropdown-content">
-				<a href="#">Bubble Sort</a>
+				<a href="javascript:bubblesort([7, 4, 3, 4, 1])";>Bubble Sort</a>
 				<a href="https://www.twitch.tv/bugha">Insertion Sort</a>
-				<a href="#">Merge Sort</a>
+				<a href="javascript:alert('Sup my dude, unfortunately we cannot run this yet')";>Merge Sort</a>
 			</div>
 			</div>
 		<h3>Hopefully a bubble sort: </h3>
 		<br>
-		
+		<p> </p>
 		<script>
+			//this is not the fastest bubble sort possible,
+				//should be able to cut it off at one further 
+				//frm the edge each time, but this was just a 
+				//quick one.
 			let bubbleSort = (numbers) => {
 				let counter = 0;
 				let counter1 = 0;
 				document.write(numbers);
 				document.write("<br>");
 				let len = numbers.length;
-				for (let i = 0; i < len; i++) {
+				let len1 = len;
+				for (let i = 0; i < len1; i++) {
 					for (let j = 0; j < len; j++) {
 						counter1++;
 						if(numbers[j] > numbers[j+1]) {
@@ -54,13 +59,17 @@
 							document.write("<br>");
 						}
 					}
+					len--;
 				}
 				document.write("The number of switches is: ");
 				document.write(counter);
+				document.write("<br>");
+				document.write("The number of comp is: ");
+				document.write(counter1);
 				return numbers;
 			};
 			var numbers = [5, 11, 14, 7, 5, 8, 3, 6, 1, 7];
-			bubbleSort(numbers);
+			//bubbleSort(numbers);
 			
 		</script>
 		
