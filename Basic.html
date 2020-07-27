@@ -24,14 +24,15 @@
 		<a href="https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html?fbclid=IwAR0cVTdZ4Ff7vQWgALN_wL3vxeDjQg7BAHeGRLxr79i521xcgS8YmblnWkA"> this</a>
 		<h3>Today's Date<h3>
 		<h3> & hopefully a bubble sort </h3>
-		
-		<p id="demo"></p>
+		<p> Swap the first two entries in the array </p>
+		<p id="demo"> </p>
 		<script>
 			let d = new Date();
 			document.getElementById("demo").innerHTML = d;
 			var numbers = [5, 1, 3, 2, 4];
 			document.write(numbers);
 			document.write('\n');
+			<!-- Swap first and second entries in the array -->
 			var temp = numbers[1];
 			numbers[1]=numbers[0];
 			numbers[0]=temp;
