@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Playing with drop-downs and multiple files</title>
+		<script src="sortingAlgs.js""></script>
+	</head>
+	<body>
+		<h1>Time to do a proper basic drop down</h1>
+		<h3>Today we will be organizing these numbers: [5, 11, 14, 7, 5, 8, 3, 6, 1, 7]</h3>
+		<select name="type" onmousedown="this.value='';" onchange="sort(this.value);">
+			<option value='Bubble'>Bubble</option>
+			<option value='insert'>Insertion</option>
+			<option value='merge'>Merge</option>
+		</select>	
+		<p id = "order"></p>
+		<p id = "counter">Number of moves: </p>
+		<p id = "counter1">Number of comp: </p>
+	</body>
+</html>
