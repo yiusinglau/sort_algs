@@ -18,26 +18,62 @@
 			<li>Set up Google Drive</li>
 			<li>Type up meeting notes (Google Drive)</li>
 			<li>Figure out drop down menu in javascript</li>
-			<li>type up basic insertion sort javascript</li>
+			<li>type up basic bubble (originally, insertion) sort javascript</li>
 		</ul>
 		<h3>Be better than:</h3>
 		<a href="https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html?fbclid=IwAR0cVTdZ4Ff7vQWgALN_wL3vxeDjQg7BAHeGRLxr79i521xcgS8YmblnWkA"> this</a>
-		<h3>Today's Date<h3>
-		<h3> & hopefully a bubble sort </h3>
+		<br>
+		<br>
+		<div class="dropdown">
+			<button class="dropbtn">Dropdown</button>
+			<div class="dropdown-content">
+				<a href="javascript:bubblesort([7, 4, 3, 4, 1])";>Bubble Sort</a>
+				<a href="https://www.twitch.tv/bugha">Insertion Sort</a>
+				<a href="javascript:alert('Sup my dude, unfortunately we cannot run this yet')";>Merge Sort</a>
+			</div>
+			</div>
+		<h3>Hopefully a bubble sort: </h3>
+		<br>
+		<p> </p>
 		
-		<p id="demo"></p>
 		<script>
-			let d = new Date();
-			document.getElementById("demo").innerHTML = d;
-			var numbers = [5, 1, 3, 2, 4];
-			document.write(numbers);
-			document.write('\n');
-			var temp = numbers[1];
-			numbers[1]=numbers[0];
-			numbers[0]=temp;
-			document.write(numbers);
-			document.write("\n");
+			//this is not the fastest bubble sort possible,
+				//should be able to cut it off at one further 
+				//frm the edge each time, but this was just a 
+				//quick one.
+			let bubbleSort = (numbers) => {
+				let counter = 0;
+				let counter1 = 0;
+				document.write(numbers);
+				document.write("<br>");
+				let len = numbers.length;
+				let len1 = len;
+				for (let i = 0; i < len1; i++) {
+					for (let j = 0; j < len; j++) {
+						counter1++;
+						if(numbers[j] > numbers[j+1]) {
+							let tmp = numbers[j];
+							numbers[j] = numbers[j+1];
+							numbers[j+1] = tmp;
+							counter++;
+							document.write(numbers);
+							document.write("<br>");
+						}
+					}
+					len--;
+				}
+				document.write("The number of switches is: ");
+				document.write(counter);
+				document.write("<br>");
+				document.write("The number of comp is: ");
+				document.write(counter1);
+				return numbers;
+			};
+			var numbers = [5, 11, 14, 7, 5, 8, 3, 6, 1, 7];
+			bubbleSort(numbers);
+			
 		</script>
+		
 		
 			
 	</body>
