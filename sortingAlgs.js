@@ -1,6 +1,9 @@
 let sort = (value) => {
+	var numbers = new Array(randomNumbers.length);
+	for(let i = 0; i<randomNumbers.length ; i++){
+		numbers[i] = randomNumbers[i];
+	}
 	if (value === "Bubble") {
-		var numbers = [5, 11, 14, 7, 5, 8, 3, 6, 1, 7];
 		var num = numbers.join() + "<br>";
 		let counter = 0;
 		let counter1 = 0;
@@ -20,12 +23,11 @@ let sort = (value) => {
 			}
 		}
 		document.getElementById("order").innerHTML = num;
-		document.getElementById("counter").innerHTML = "Number of switches: " + counter;
+		document.getElementById("counter").innerHTML = "Number of moves: " + counter;
 		document.getElementById("counter1").innerHTML = "Number of comp: " + counter1;
 		
 	}
 	else if (value === "insert") {
-		var numbers = [5,11,14,7,5,8,3,6,1,7];
 		var num = numbers.join() + "<br>";
 		let counter = 0;
 		let counter1 = 0;
@@ -57,12 +59,11 @@ let sort = (value) => {
 			
 		}	
 		document.getElementById("order").innerHTML = num;
-		document.getElementById("counter").innerHTML = "Number of switches: " + counter;
+		document.getElementById("counter").innerHTML = "Number of moves: " + counter;
 		document.getElementById("counter1").innerHTML = "Number of comp: " + counter1;
 		
 	}
 	else if(value === "merge") {
-		var numbers = [5, 11, 14, 7, 5, 8, 3, 6, 1, 7];
 		var num = numbers.join() + "<br>";
 		let counter = 0;
 		let counter1 = 0;
@@ -70,10 +71,22 @@ let sort = (value) => {
 		let len1 = len;
 		//insert code here
 		document.getElementById("order").innerHTML = num;
-		document.getElementById("counter").innerHTML = "Number of switches: " + counter;
+		document.getElementById("counter").innerHTML = "Number of moves: " + counter;
 		document.getElementById("counter1").innerHTML = "Number of comp: " + counter1;		
 	}
 }
-
-
-//bubbleSort(numbers);
+let random = () => {
+	var x = document.getElementById("lArray").value;
+	document.getElementById("order").innerHTML = "";
+	document.getElementById("counter").innerHTML = "Number of moves: ";
+	document.getElementById("counter1").innerHTML = "Number of comp: ";
+	var numbers = new Array(x);
+	
+	for (var i = 0; i < x; i++){
+		var y = Math.floor(Math.random()*101);
+		numbers[i] = y;
+	}
+	randomNumbers = numbers;
+	document.getElementById("numberSet").innerHTML = "Today we will be organizing these numbers: " + randomNumbers;
+}
+var randomNumbers = [5, 11, 14, 7, 5, 8, 3, 6, 1, 7];
