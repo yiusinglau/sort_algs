@@ -75,6 +75,8 @@ let sort = (value) => {
 		document.getElementById("counter1").innerHTML = "Number of comp: " + counter1;		
 	}
 }
+
+
 let random = () => {
 	var x = document.getElementById("lArray").value;
 	document.getElementById("order").innerHTML = "";
@@ -86,7 +88,13 @@ let random = () => {
 		var y = Math.floor(Math.random()*101);
 		numbers[i] = y;
 	}
+	//updaterNum();
 	randomNumbers = numbers;
+	//document.getElementById("num").innerHTML = randomNumbers;
 	document.getElementById("numberSet").innerHTML = "Today we will be organizing these numbers: " + randomNumbers;
 }
-var randomNumbers = [5, 11, 14, 7, 5, 8, 3, 6, 1, 7];
+
+
+var randomNumbers = [5, 11, 14, 7, 5, 8, 3, 6, 1, 7]; //: rNumbers;
+
+
