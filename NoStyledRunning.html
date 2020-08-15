@@ -3,17 +3,25 @@
 	<head>
 		<title>Playing with drop-downs and multiple files</title>
 		<script src="sortingAlgs.js""></script>
+		
 	</head>
 	<body>
 		<h1>Time to do a proper basic drop down</h1>
-		<h3>Today we will be organizing these numbers: [5, 11, 14, 7, 5, 8, 3, 6, 1, 7]</h3>
+		<h3 id = "numberSet">Today we will be organizing these numbers: [5, 11, 14, 7, 5, 8, 3, 6, 1, 7]</h3>
+		
+		<br>
+		<input type="number" id="lArray" name="lArray" value="10" min="1" max="100"><br><br>
+		<button onclick="random()"; >Randomize</button>
 		<select name="type" onmousedown="this.value='';" onchange="sort(this.value);">
 			<option value='Bubble'>Bubble</option>
 			<option value='insert'>Insertion</option>
 			<option value='merge'>Merge</option>
+	
 		</select>	
 		<p id = "order"></p>
 		<p id = "counter">Number of moves: </p>
 		<p id = "counter1">Number of comp: </p>
+		<canvas id = "myCanvas" width="600" height="400"></canvas>
+		<script src="canvasS.js"></script>
 	</body>
 </html>
